@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Document
+        </title>
+        <link rel = "stylesheet"  href= "./stylesheets/calculator.css">
+        <script src="./calculator.js" defer></script>
+    </head>
+    
+    <body>
+        <header>
+            <br>
+            <b><H2>Grade Calculator</H2></b>
+        </header>
+        <main class="main-area">
+            <br>
+            <p class ="one">Activities</p>
+            
+            <p class="two">Give grades to the numeric activites:</p>
+
+            <table class ="content-table">
+                
+                <tr>
+                    <th scope>Name</th><th>Short Name</th><th>Weight</th><th>Grade</th><th>Percent</th>
+                </tr>
+
+                
+                <tr>
+                    <td>Activity 1</td><td>A1</td>
+                    <td><input type = "text" id = "w1"></td>
+                    <td><form oninput= "p1.value=Math.round((parseInt(a1.value)/parseInt(m1.value))*100)"> 
+                        <input type = "text" name = "a1"> /<br><br>
+                        <input type = "text" name ="m1"></td>
+                        <td><output id = "p1"></output></td></form>
+                        
+                 </tr>
+                
+                 <tr>
+                    <td>Activity 2</td><td>A2</td>
+                    <td><input type = "text" id = "w2"></td>
+                    <td><form oninput= "p2.value=Math.round((parseInt(a2.value)/parseInt(m2.value))*100)"> 
+                        <input type = "text" name = "a2"> /<br><br>
+                        <input type = "text" name ="m2"></td>
+                        <td><output id = "p2"></output></td></form>
+                        
+                 </tr>
+
+                 <tr>
+                    <td>Activity 3</td><td>A3</td>
+                    <td><input type = "text" id = "w3"></td>
+                    <td><form oninput= "p3.value=Math.round((parseInt(a3.value)/parseInt(m3.value))*100)"> 
+                        <input type = "text" name = "a3"> /<br><br>
+                        <input type = "text" name ="m3"></td>
+                        <td><output id = "p3"></output></td></form>
+                        
+                 </tr>
+                
+         </table>
+       <p id="three"><b>Result</b></p>
+       <p id="answer"> </p>
+       <p id="t1"></p>
+       <p id = "t2"></p>
+       <p id = "t3"></p>
+       
+       <br><br>
+       <button class = "but1" name="b1" type = " button" onclick="weightedCalc()">
+           WEIGHTED
+       </button>
+       <button class = "but2" name ="b2" type="button" onclick="meanCalc()">
+           MEAN
+       </button>
+
+    </body>
+  
+</html>
